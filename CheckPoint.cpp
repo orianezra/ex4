@@ -13,6 +13,9 @@ CheckPoint::CheckPoint(int x, int y) {
     thirdNeighbor = false;
     forthNeighbor = false;
 }
+void CheckPoint::printC() {
+    cout<< "hey";
+}
 //this is the default constructor of the class check point
 CheckPoint::CheckPoint() {
     isTouched = false;
