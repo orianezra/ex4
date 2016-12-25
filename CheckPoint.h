@@ -22,7 +22,7 @@ private:
     bool forthNeighbor;
     //public member section.
 public:
-
+    void movee();
     void setFirstNeighbor(bool);
     void setSecondNeighbor(bool);
     void setThirdNeighbor(bool);
