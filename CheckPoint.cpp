@@ -22,7 +22,9 @@ CheckPoint::CheckPoint() {
     thirdNeighbor = false;
     forthNeighbor = false;
 }
-void CheckPoint::noname(){}
+void CheckPoint::noname(){
+    cout << "hello";
+}
 //this method sets the existence member in a checkPoint object.
 void CheckPoint::exisSetBool() {
     isExist = false;
