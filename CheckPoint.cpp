@@ -14,7 +14,9 @@ CheckPoint::CheckPoint(int x, int y) {
     forthNeighbor = false;
 }
 void CheckPoint::printC() {
-    for(int i = 0; i<3;i++){cout<< "hey there";}
+    for(int i = 0; i<3;i++){
+        cout<< "hey there" << endl<< "boom";
+    }
 
 }
 //this is the default constructor of the class check point
