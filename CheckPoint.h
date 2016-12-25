@@ -22,7 +22,6 @@ private:
     bool forthNeighbor;
     //public member section.
 public:
-    void printC();
     void setFirstNeighbor(bool);
     void setSecondNeighbor(bool);
     void setThirdNeighbor(bool);
