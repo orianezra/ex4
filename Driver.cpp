@@ -14,7 +14,7 @@ Driver::Driver(int id, int age , int i, MaterialStatus status, int satisfaction)
 Driver::Driver(){}
 //this is the destructor of the driver class
 Driver::~Driver() {
-    //delete this->trip;
+    delete this->trip;
 }
 //this is the setter method for setting a texi to a given driver
 void Driver:: setTexi(Vehicles* texi) {

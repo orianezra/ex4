@@ -49,7 +49,10 @@ void Cab::setKM(int km) {
     this->numOfKM += km;
 }
 //this is a setter method for the cab's tarrif
-void Cab::setTarif(double){}
+void Cab::setTariff(double tarif) {
+    this->tarif = tarif;
+}
+//this method checks if one trip info is different than tthe other
 bool  Cab::operator !=(const Cab &other) const{
     if (this->id != other.id) {
         return true;
