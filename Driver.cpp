@@ -104,3 +104,9 @@ void Driver::drive(queue<CheckPoint *> q) {
 bool Driver::getExist(){
     return this->existCar;
 }
+unsigned long Driver::disCalculation(Point other){
+    this->waze->setStart(&this->location);
+    this->waze->setEnd(&other);
+    queue <CheckPoint*> q = this->waze->start(this->map->getGrid());
+    return q.size();
+}

@@ -7,5 +7,11 @@ add_subdirectory(lib/googletest)
 include_directories(lib/googletest/googletest/include)
 include_directories(lib/googletest/googlemock/include)
 
+#same as yanai
+set(BOOST_ROOT CACHE PATH "/usr/include/boost/")
+find_package(Boost 1.58.0 COMPONENTS serialization system)
+include_directories(${Boost_INCLUDE_DIR})
+link_libraries(${Boost_LIBRARIES})
+
 add_executable(ex3 ${SOURCE_FILES})
 target_link_libraries(ex3 gtest gtest_main)

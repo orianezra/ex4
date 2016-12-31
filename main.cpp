@@ -8,6 +8,7 @@ int main(int argc ,char** argv){
 }
 */
 
+/*
 #include <string.h>
 #include <iostream>
 #include "Grid.h"
@@ -166,6 +167,7 @@ int main(){
                 break;
             }
             case 6:{
+
                 if(!texiC->getListVehicles().empty() && !texiC->getListDriver().empty()){
                     list<Driver*> drivers = texiC->getListDriver();
                     list<Vehicles*> listV = texiC->getListVehicles();
@@ -191,8 +193,11 @@ int main(){
                     }
                     texiC->setListDrivers(drivers);
                     texiC->setListVehicles(listV);
+
                 }
                 else{break;}
+
+
                 for(int n = 0; n < texiC->getListDriver().size(); n++) {
                     int size = texiC->getListTrips().size();
                     if(size){
@@ -225,4 +230,45 @@ int main(){
     delete g;
     delete m;
     exit(0);
+}
+ */
+
+
+#include <iostream>
+#include "TexiCenter.h"
+
+using namespace std;
+
+int main(){
+    int idInput =0;
+    int numOKInput=0;
+    double tariff= 1;
+
+    Cab* c = new Cab(idInput, numOKInput, tariff,CarColors::RED, CarsManufactor::FIAT);
+    c->save();
+
+    Cab c2 = c->load();
+    cout<<"id: "<< c2.getID()<< endl;
+    cout<<"tariff: "<< c2.getTariff()<<endl;
+    if(c2.getColor() == CarColors::RED){
+        cout <<"color: BLUE" <<endl;
+    }
+    delete c;
+
+    int mP = 0;
+    int nP = 0;
+    int rID= 1;
+    double t = 5.7;
+    Point* sP = new Point(1,1);
+    Point* eP = new Point(0,0);
+
+    TripInfo *trip = new TripInfo(mP, nP, rID, t, sP, eP);
+
+    trip->save();
+    TripInfo trip2 = trip->load();
+
+    cout<<"endPX: "<< trip2.getStartPoint()->getX_axis()<< endl;
+    cout<<"endPY: "<< trip2.getStartPoint()->getY_axis()<< endl;
+    cout<<"tariff: "<< trip2.getTarif()<<endl;
+    delete trip;
 }
